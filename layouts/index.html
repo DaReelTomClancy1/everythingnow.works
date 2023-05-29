@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ range where .Site.RegularPages "Section" "posts" }}
+<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+<a class="post-title" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+{{ end }}
+{{ end }}
